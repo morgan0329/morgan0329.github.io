@@ -16,12 +16,12 @@
 
 
 <meta name="description" content="介绍如何完成新的blog创建的全过程 一 安装hexo打开这个hexo 基础安装： git,npm 然后直接跑命令： npm install hexo-cli -g注意：安装的时候，如果是npm5.X，因本身存在一个缺陷，导致安装如下错误，显示不是用root或administrator帐号，即使改成root/admin帐号运行也会报此错误：  npm ERR!   errno: -4048, np">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="如何初始化Blog">
-<meta property="og:url" content="http://yoursite.com/2018/01/11/blog-init/index.html">
+<meta property="og:url" content="http://yoursite.com/blog-init.html">
 <meta property="og:site_name" content="Morgan&#39;s Blog">
 <meta property="og:description" content="介绍如何完成新的blog创建的全过程 一 安装hexo打开这个hexo 基础安装： git,npm 然后直接跑命令： npm install hexo-cli -g注意：安装的时候，如果是npm5.X，因本身存在一个缺陷，导致安装如下错误，显示不是用root或administrator帐号，即使改成root/admin帐号运行也会报此错误：  npm ERR!   errno: -4048, np">
-<meta property="og:updated_time" content="2018-01-11T09:26:13.524Z">
+<meta property="og:updated_time" content="2018-01-11T09:36:31.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何初始化Blog">
 <meta name="twitter:description" content="介绍如何完成新的blog创建的全过程 一 安装hexo打开这个hexo 基础安装： git,npm 然后直接跑命令： npm install hexo-cli -g注意：安装的时候，如果是npm5.X，因本身存在一个缺陷，导致安装如下错误，显示不是用root或administrator帐号，即使改成root/admin帐号运行也会报此错误：  npm ERR!   errno: -4048, np">
@@ -66,7 +66,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
+        isPost: false,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -256,10 +256,10 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-blog-init" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/01/11/blog-init/" class="article-date">
+      <a href="/blog-init.html" class="article-date">
       <time datetime="2018-01-11T09:25:40.000Z" itemprop="datePublished">2018-01-11</time>
 </a>
 
@@ -292,6 +292,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
+              <style>
+    .article-meta { display: none; }
+    #container .article .article-title { padding-right: 0; }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover { border-left: none; }
+    .article-title { font-size: 1.6em }
+    .article-entry hr { margin: 0;}
+    .article-meta,
+    #container .article-info-post.article-info { display: none;}
+    #container .article .article-title { padding: 0; }
+</style>
+
+
+          
         <p>介绍如何完成新的blog创建的全过程</p>
 <h2 id="一-安装hexo"><a href="#一-安装hexo" class="headerlink" title="一 安装hexo"></a>一 安装hexo</h2><p>打开这个<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
 <p>基础安装： git,npm</p>
@@ -309,7 +328,7 @@
 <h2 id="三-更换主题"><a href="#三-更换主题" class="headerlink" title="三 更换主题"></a>三 更换主题</h2><p><em>我个人认为这个主题很不错：Yelee</em></p>
 <p>进入：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> 输入: Yelee<br>直接进入，文章去完成下载 就好：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</span><br><span class="line"></span><br><span class="line">确定 themes文件夹下 会多出一个yelee文件夹</span><br><span class="line"></span><br><span class="line">在 _config.yml 改 theme: yelee</span><br></pre></td></tr></table></figure>
-<h3 id="四-远程部署"><a href="#四-远程部署" class="headerlink" title="四 远程部署"></a>四 远程部署</h3><p>继续修改 _config.yml</p>
+<h2 id="四-远程部署"><a href="#四-远程部署" class="headerlink" title="四 远程部署"></a>四 远程部署</h2><p>继续修改 _config.yml</p>
 <p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/XXX/XXX.github.io.git" target="_blank" rel="noopener">https://github.com/XXX/XXX.github.io.git</a><br>  branch: master</p>
 <p>然后：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
 <p>打开: <a href="https://XXX.github.io" target="_blank" rel="noopener">https://XXX.github.io</a> 即可</p>
@@ -320,59 +339,10 @@
   </div>
   
     
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/01/11/blog-init/">如何初始化Blog</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Morgan Liao</a></p>
-        <p><span>发布时间:</span>2018-01-11, 17:25:40</p>
-        <p><span>最后更新:</span>2018-01-11, 17:26:13</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/01/11/blog-init/" title="如何初始化Blog">http://yoursite.com/2018/01/11/blog-init/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/01/11/blog-init/　　作者: Morgan Liao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
 
-
-
-    <nav id="article-nav">
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/01/11/hello-world/">
-                    Hello World
-                </a>
-            </div>
-        
-    </nav>
 
   
 </article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-安装hexo"><span class="toc-number">1.</span> <span class="toc-text">一 安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-申请github上的代码空间"><span class="toc-number">2.</span> <span class="toc-text">二 申请github上的代码空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-更换主题"><span class="toc-number">3.</span> <span class="toc-text">三 更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#四-远程部署"><span class="toc-number">3.1.</span> <span class="toc-text">四 远程部署</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
 
 
 
@@ -405,24 +375,6 @@
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2018/01/11/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/11/blog-init/">如何初始化Blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/11/hello-world/">Hello World</a></li></ul>
 
 
 
